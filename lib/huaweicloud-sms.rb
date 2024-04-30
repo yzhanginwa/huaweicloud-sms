@@ -13,10 +13,13 @@ class HuaweicloudSms
   end
 
 
-  def send_sms(sender, receiver, template_id, template_param, signature)
+  def send_sms(sender, receiver, template_id, template_params, signature)
     url = URI.parse(@url)
     request = Net::HTTP::Post.new(url.path)
   
+    # template_param needs to be an array of strings
+    template_param = '[' + template_params.map{|p| "\"#{p}\""}.join(',') +  ']'
+
     form_data = {'from' => sender,
                 'to' => receiver,
                 'templateId' => template_id,
