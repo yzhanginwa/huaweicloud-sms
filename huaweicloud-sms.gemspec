@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'huaweicloud-sms'
   s.licenses    = ['MIT']
-  s.version     = '0.2.0'
+  s.version     = '0.3.0'
   s.date        = '2024-04-30'
   s.summary     = "A ruby SDK for developers to use HuaweiCloud's SMS services"
   s.description = "huaweicloud-sms is a light and easy to use gem. It could help developers quickly utilize HuaweiCloud's SMS services."
