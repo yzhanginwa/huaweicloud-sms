@@ -10,5 +10,13 @@
 ```
 
 ## Usage
-1. 
+1. Initialize the SMS instance
 
+```
+   instance = HuaweiCloudSms.new(app_key, app_secret, url)
+```
+
+2. Send SMS
+```
+   instance.send(sender, receiver, template_id, template_params, signature)
+```
